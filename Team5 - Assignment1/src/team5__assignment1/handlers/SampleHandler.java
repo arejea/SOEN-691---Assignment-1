@@ -16,6 +16,7 @@ public class SampleHandler extends AbstractHandler {
 				window.getShell(),
 				"Team5_-_Assignment1",
 				"Hello, Eclipse world");
+		System.out.println("here");
 		return null;
 	}
 }
