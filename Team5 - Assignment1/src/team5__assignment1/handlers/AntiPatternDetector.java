@@ -15,6 +15,8 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.*;
 
+import team5__assignment1.handlers.*;
+
 import team5__assignment1.patterns.ExceptionFinderTool;
 import team5__assignment1.visitors.MethodDeclarationVisitor;
 

@@ -17,6 +17,7 @@ import org.eclipse.jdt.core.dom.MethodDeclaration;
 
 import team5__assignment1.handlers.SampleHandler;
 import team5__assignment1.visitors.CatchClauseVisitor;
+import team5__assignment1.handlers.*;
 
 public class ExceptionFinderTool extends ASTVisitor {HashMap <MethodDeclaration, String> suspectMethods = new HashMap<>();
 
