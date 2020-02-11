@@ -25,7 +25,7 @@ public class SampleHandler extends AbstractHandler {
 		SampleHandler.output = myConsole.newMessageStream();
 		
 		ExceptionFinderTool detectException = new ExceptionFinderTool();
-		detectException.execute(event);
+	//	detectException.execute(event);
 		return null;
 	}
 
