@@ -3,18 +3,26 @@ package team5__assignment1.handlers;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
+
 import org.eclipse.ui.IWorkbenchWindow;
+<<<<<<< HEAD
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
 import org.eclipse.ui.console.IConsoleManager;
 import org.eclipse.ui.console.MessageConsole;
 import org.eclipse.ui.console.MessageConsoleStream;
+=======
+
+>>>>>>> arejea
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.jface.dialogs.MessageDialog;
 
-public class SampleHandler extends AbstractHandler {
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> arejea
 	private static final String CONSOLE_NAME = " TEAM 5: DETECTING  OVERCATCH EXCEPTIONS AND RETRUN NULL" ;
 	private static MessageConsole myConsole;
 	private static MessageConsoleStream out;
