@@ -15,6 +15,8 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 
+import team5__assignment1.patterns.ExceptionFinderTool;
+import team5__assignment1.visitors.MethodDeclarationVisitor;
 import team5__assignment1.visitors.OverCatchVisitor;
 
 public class DetectCatchExceptions extends AbstractHandler {
@@ -25,8 +27,7 @@ public class DetectCatchExceptions extends AbstractHandler {
 		IWorkspaceRoot root = workspace.getRoot();
 		IProject[] projects = root.getProjects();
 		detectInProjects(projects);
-		SampleHandler.printMessage("DONE DETECTING");
-		System.out.println("DONE DETECTING");
+		SampleHandler.printMessage("Exception Anti Patter Analysis Finished");
 		return null;
 	}
 	
@@ -36,6 +37,14 @@ public class DetectCatchExceptions extends AbstractHandler {
 			SampleHandler.printMessage("DETECTING IN: " + project.getName());
 			System.out.println("DETECTING IN: " + project.getName());
 			IPackageFragment[] packages;
+			ExceptionFinderTool exceptionFinder = new ExceptionFinderTool();
+			try {
+				exceptionFinder.findExceptions(project);
+				exceptionFinder.printExceptions();
+			} catch (JavaModelException e1) {
+				e1.printStackTrace();
+			}
+			
 			try {
 				packages = JavaCore.create(project).getPackageFragments();
 				for (IPackageFragment mypackage : packages) {
@@ -53,17 +62,17 @@ public class DetectCatchExceptions extends AbstractHandler {
 		for (ICompilationUnit unit : packageFragment.getCompilationUnits()) {
 			CompilationUnit parsedCompilationUnit = parse(unit);	// Create AST from source code project
 
-			// do method visit here and check stuff 
-			   //Include Catch Clause visitor .
-			
-			
-			
-			OverCatchVisitor checksOvercatch= new OverCatchVisitor();
-			parsedCompilationUnit.accept(checksOvercatch);
-			printMethodInfo(checksOvercatch);
+		//	OverCatchVisitor checksOvercatch= new OverCatchVisitor();
+		//	parsedCompilationUnit.accept(checksOvercatch);
+		//	printMethodInfo(checksOvercatch);
 		}
 	}
 	
+	private static void printMethodInfo(MethodDeclarationVisitor methodDeclarationVisitor) {
+		SampleHandler.printMessage(String.format("The number of method in the project is %s ", methodDeclarationVisitor.getMethodCount()));		
+		
+	}
+
 	// Print Result  for Catch Clause 
 	
       private static void printMethodInfo(OverCatchVisitor  checksOverCatch) {

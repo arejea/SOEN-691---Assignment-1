@@ -5,24 +5,19 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 
 import org.eclipse.ui.IWorkbenchWindow;
-<<<<<<< HEAD
+
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
 import org.eclipse.ui.console.IConsoleManager;
 import org.eclipse.ui.console.MessageConsole;
 import org.eclipse.ui.console.MessageConsoleStream;
-=======
 
->>>>>>> arejea
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.jface.dialogs.MessageDialog;
 
 
+public class SampleHandler extends AbstractHandler {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> arejea
 	private static final String CONSOLE_NAME = " TEAM 5: DETECTING  OVERCATCH EXCEPTIONS AND RETRUN NULL" ;
 	private static MessageConsole myConsole;
 	private static MessageConsoleStream out;
@@ -49,9 +44,8 @@ import org.eclipse.jface.dialogs.MessageDialog;
 			for (int i = 0; i < existing.length; i++)
 			   if (name.equals(existing[i].getName()))
 			      return (MessageConsole) existing[i];
-			
-			//no console found, so create a new one
-			//MessageConsole myConsole = new MessageConsole(name, null);
+		
+			MessageConsole myConsole = new MessageConsole(name, null);
 			conMan.addConsoles(new IConsole[]{myConsole});
 			return myConsole;
 		}

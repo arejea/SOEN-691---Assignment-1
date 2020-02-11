@@ -30,9 +30,7 @@ public class CatchClauseVisitor extends ASTVisitor {
 	private boolean isNullCatch(CatchClause node) {
 		
 		for(int i =0; i<node.getBody().statements().size(); i++) {
-			System.out.println("here for null catch....................."+ node.getBody().statements().get(i));
 			if(node.getBody().statements().get(i).toString().replace(" ", "").contains("returnnull")) {
-				System.out.println("progress null catch found and added");
 				return true;
 			}
 			}
