@@ -50,6 +50,10 @@ public class CatchClauseVisitor extends ASTVisitor {
 	public boolean visit(MethodDeclaration node) {
 		allMethods.add(node);
 		
+		if	(node== null || node.equals(null) || node.getBody()==null) {
+		return false;
+	}
+		
 		for(int i=0; i< node.getBody().statements().size(); i++) {
 
             if(node.getBody().statements().get(i).toString().contains("thrown ")){
