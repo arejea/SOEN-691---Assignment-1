@@ -32,8 +32,52 @@ public class ReadFile {
     Map<String, int[]> codeChurn_change = new HashMap<>();
     codeChurn_change = findCodeChurnAndChange(INPUT_FILE_PRE_FILE_CHANGE);
     System.out.println("Data Extracted!");
+
+    mergeData(unique_authors, codeChurn_change, post_release_bugs, pre_release_bugs);
     
   }
+
+  private static void mergeData(Map<String, Integer> authors, Map<String, int[]> changes, Map<String, Integer> post_bugs, Map<String, Integer> pre_bugs) {
+    Map<String, int[]> dataset = new HashMap<>();
+
+    for (String file : authors.keySet()) {
+      //value[0]=number of authors, value[1]=number of code churn, value[2]=number of changes, value[3]=post-release bugs, value[4]=pre-release bugs
+      int[] values = new int[5];
+      values[0] = authors.get(file);
+      if (changes.containsKey(file)) {
+        values[1] = changes.get(file)[0];
+        values[2] = changes.get(file)[1];
+      }
+      if (post_bugs.containsKey(file))
+        values[3] = post_bugs.get(file);
+      if (pre_bugs.containsKey(file))
+        values[4] = pre_bugs.get(file);
+      dataset.put(file, values);
+    }
+
+    int post_bug = 0;
+    int pre_bug = 0;
+    int num_change = 0;
+
+    for(Map.Entry<String, int[]> entry : dataset.entrySet()){
+      if(entry.getValue()[3] != 0){
+        System.out.println(entry);
+        post_bug++;
+      }
+      if(entry.getValue()[4] != 0){
+        pre_bug++;
+      }
+      if(entry.getValue()[2] != 0){
+        num_change++;
+      }
+    }
+    System.out.println("Number of post-release bugs = " + post_bug);
+    System.out.println("Number of pre-release bugs = " + pre_bug);
+    System.out.println("Number of files have changed = " + num_change);
+    System.out.println("Done");
+
+  }
+
 // To do - add files without bug
   private static Map<String, Integer> findBugs(String bugFile, String changeFile) {
 
@@ -83,7 +127,6 @@ public class ReadFile {
     for(Map.Entry<String, Set<String>> entry : result.entrySet()){
       authors.put(entry.getKey(), entry.getValue().size());
     }
-    System.out.println("Data Extracted!");
     return authors;
   }
 
@@ -143,8 +186,6 @@ public class ReadFile {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    System.out.println("Data Extracted!");
-    System.out.println("Done");
     return result;
   }
 
@@ -161,6 +202,5 @@ public class ReadFile {
     }
     return result;
   }
-
 
 }
