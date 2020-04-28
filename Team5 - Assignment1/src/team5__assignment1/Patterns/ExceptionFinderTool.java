@@ -204,7 +204,8 @@ public class ExceptionFinderTool extends ASTVisitor {
 						if(tryMethods.size()>=1) {
 						FlowHandlingCalculator();
 						}
-						//printReport();
+						//to print anti pattern exception
+						printReport();
 						printFlowReport();
 						
 				
