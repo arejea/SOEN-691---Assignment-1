@@ -18,18 +18,22 @@ import org.eclipse.jface.dialogs.MessageDialog;
 
 public class SampleHandler extends AbstractHandler {
 
-	private static final String CONSOLE_NAME = " TEAM 5: DETECTING  OVERCATCH EXCEPTIONS AND RETRUN NULL" ;
+	private static final String CONSOLE_NAME = " TEAM 5: ANTI PATERN DETECTOR" ;
 	private static MessageConsole myConsole;
 	private static MessageConsoleStream out;
 		
 		
 		@Override
 		public Object execute(ExecutionEvent event) throws ExecutionException {
+			return extracted(event);
+		}
+
+		private Object extracted(ExecutionEvent event) throws ExecutionException {
 			SampleHandler.myConsole = findConsole(CONSOLE_NAME);
 		SampleHandler.out = myConsole.newMessageStream(); 
 			
 			
-			DetectCatchExceptions detectExceptions=new DetectCatchExceptions();
+			final DetectCatchExceptions detectExceptions=new DetectCatchExceptions();
 			detectExceptions.execute(event);
 			
 			
@@ -52,5 +56,10 @@ public class SampleHandler extends AbstractHandler {
 		
 		// To print messages into the Debug view, not just in the console here.
 		static public void printMessage(String message) {
+			out.print(message);
+}
+		
+		static public void printMessageLine(String message) {
 			out.println(message);
-}}
+}
+		}

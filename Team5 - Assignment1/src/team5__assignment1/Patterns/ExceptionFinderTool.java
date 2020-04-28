@@ -1,4 +1,4 @@
-package team5__assignment1.patterns;
+package team5__assignment1.Patterns;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

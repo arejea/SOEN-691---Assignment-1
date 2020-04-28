@@ -3,8 +3,9 @@
 	import java.util.*;
 
 	public class Graph<T> {
+		
 
-	    private Map<T, List<T>> map = new HashMap<>();
+		private Map<T, List<T>> map = new HashMap<>();
 
 	    public void addVertex(T s) {
 	        map.put(s, new LinkedList<T>());
@@ -30,13 +31,13 @@
 	    }
 
 
-	    public void hasVertex(T s) {
+	    public boolean hasVertex(T s) {
 	        if (map.containsKey(s)) {
-	            System.out.println("The graph contains "
-	                    + s + " as a vertex.");
+	           
+	            return true;
 	        } else {
-	            System.out.println("The graph does not contain "
-	                    + s + " as a vertex.");
+	           
+	            return false;
 	        }
 	    }
 
@@ -71,39 +72,45 @@
 
 	        Map<T, Boolean> visited = new HashMap<>();
 	        map.forEach((t, ts) -> {
+	       // 	System.out.println("here checking for each invoked in "+ t+" for "+ts );
 	            visited.put(t, false);
 	        });
 
 	        LinkedList<T> queue = new LinkedList<>();
-
+	        
 	        visited.put(s, true);
+	        
 	        queue.add(s);
 
 	        Iterator<T> i;
 	        while (queue.size()!=0)
 	        {
+	        	
 	            s = queue.poll();
-
 	            T n;
 	            i = map.get(s).iterator();
 
 	            while (i.hasNext())
 	            {
 	                n = i.next();
-
-	                if (n==d)
-	                    return true;
+	                
+	                if (n==d) {
+	                	return true;
+	                }
+	            	
+	                    
 
 	                if (!visited.get(n))
 	                {
 	                    visited.put(n, true);
 	                    queue.add(n);
+	                    
 	                }
 	            }
 	        }
 
 	        return false;
 	    }
-	}
+}
 
 
