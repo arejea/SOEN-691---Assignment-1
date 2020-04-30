@@ -188,7 +188,6 @@ public class ReadFile {
 
     for(Map.Entry<String, int[]> entry : dataset.entrySet()){
       if(entry.getValue()[3] != 0){
-        System.out.println(entry);
         post_bug++;
       }
       if(entry.getValue()[4] != 0){
