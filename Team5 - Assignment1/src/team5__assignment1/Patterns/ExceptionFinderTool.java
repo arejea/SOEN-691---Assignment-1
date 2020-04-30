@@ -106,6 +106,7 @@ public class ExceptionFinderTool extends ASTVisitor {
 	List<MethodDeclaration> allMethods ;
 	Map<Integer,TryStatement>t ;
 	List<Integer> tryCallDepth = new ArrayList();
+	int tryCallD = 0;
 	  	
 	
 	private HashSet<String> overCatches = new HashSet<>();
@@ -156,7 +157,7 @@ public class ExceptionFinderTool extends ASTVisitor {
 					SampleHandler.printMessageLine(str);
 		
 					CatchClauseVisitor catchExceptionVisitor = new CatchClauseVisitor();
-		
+					
 					parsedCompilationUnit.accept(catchExceptionVisitor);
 						tryP = new HashMap(catchExceptionVisitor.getTryPositions());
 						catchP = new HashMap(catchExceptionVisitor.getCatchPositions());
@@ -164,7 +165,6 @@ public class ExceptionFinderTool extends ASTVisitor {
 						System.out.println("str--"+str);
 						String converted = readFileToString(str);
 						parse(converted);
-						counter(catchExceptionVisitor);
 							
 							g = new Graph<>();
 							
@@ -172,6 +172,7 @@ public class ExceptionFinderTool extends ASTVisitor {
 						 this.allInvoked = new HashMap (catchExceptionVisitor.invokedMethod); 
 						 this.allMethods = new ArrayList (catchExceptionVisitor.allMethods); 
 						this.catchMethods = new HashMap (catchExceptionVisitor.catchMethods);
+						
 						//this.t =catchExceptionVisitor.getTrys();
 						  
 						if(tryMethods.size()>=1) {
@@ -199,13 +200,14 @@ public class ExceptionFinderTool extends ASTVisitor {
 
 							  
 						}
-						 
 						printExceptions();
+						counter(catchExceptionVisitor);
+
+						
 						if(tryMethods.size()>=1) {
 						FlowHandlingCalculator();
 						}
-						//to print anti pattern exception
-						printReport();
+						//printReport();
 						printFlowReport();
 						
 				
@@ -214,6 +216,7 @@ public class ExceptionFinderTool extends ASTVisitor {
 	
 	private void printFlowReport() {
 		// TODO Auto-generated method stub
+		SampleHandler.printMessage("Java File: ");
 		SampleHandler.printMessage(" ,"+getCatchQuantity());
 		  for(Entry<String, Double> entry : flowActionPercentages.entrySet()) {
 			    String key = entry.getKey();
@@ -221,6 +224,14 @@ public class ExceptionFinderTool extends ASTVisitor {
 			    
 			SampleHandler.printMessage(" ,"+value);
 		}
+		  
+		  SampleHandler.printMessage(" ,"+ getTryCallD());
+	  		SampleHandler.printMessage(" ,"+ getTryQuantity());
+	  		SampleHandler.printMessage(" ,"+  getTrySloc());
+	  		SampleHandler.printMessage(" ,"+ getTryLoc());
+	  		SampleHandler.printMessage(" ,"+getTryInvokeCount());
+	  		SampleHandler.printMessage(" ,"+ getTryscopeCount());
+	  		
 		  SampleHandler.printMessageLine("");
 	}
 
@@ -240,7 +251,6 @@ public class ExceptionFinderTool extends ASTVisitor {
 			 for(Entry<Integer, Integer> entry : lC.getLineComs().entrySet()) {
 				    int key = entry.getKey();
 				    int value = entry.getValue();
-				    
 				    lineComs.put(key, value);
 			
 			 }
@@ -425,12 +435,12 @@ public class ExceptionFinderTool extends ASTVisitor {
 		dummyHandlerCount = 0;
 		logAndReturnNullCount = 0;
 		multiLineLogCount = 0;
-		int nestedTryCount = 0;
-		int replyOnGetCauseCount = 0;
-		int incompleteImplCount = 0;
-		int destructiveWrappingCount = 0;
-		int interExcCount = 0;
-		int tryInvokeCount = 0;
+		 nestedTryCount = 0;
+		 replyOnGetCauseCount = 0;
+		 incompleteImplCount = 0;
+		 destructiveWrappingCount = 0;
+		 interExcCount = 0;
+		 tryInvokeCount = 0;
 		
 	}
 
@@ -563,6 +573,15 @@ public class ExceptionFinderTool extends ASTVisitor {
 		nestedCount =nestedTryCount; 
 		emptyActionCount = catchAndDoNothCount;
 		subsumptionCount = catchGenericCount;
+		
+		int result = 0;
+		for(int i=0; i<tryCallDepth.size(); i++) {
+			result = result+tryCallDepth.get(i);
+		}
+		if(tryCallDepth.size()>0) {
+			tryCallD = result/tryCallDepth.size();	
+		}
+		
 		continueActionCount = catchExceptionVisitor.getContinueActionCount();	
 		abortActionCount = catchExceptionVisitor.getAbortActionCount();
 		logActionCount = catchExceptionVisitor.getLogActionCount();
@@ -720,6 +739,7 @@ public class ExceptionFinderTool extends ASTVisitor {
 
 	
 	public void OverCatchAnalysis() { 
+		tryCallDepth = new ArrayList();
 
 		  if(tryMethods.size()>=1) { 
 			  if(allInvoked.size()>=1) {
@@ -1240,6 +1260,10 @@ public class ExceptionFinderTool extends ASTVisitor {
 		return root;
 	}
 
+	public int getTryCallD() {
+		return tryCallD;
+	}
+
 	public void setRoot(String root) {
 	
 		String result[]= root.split("/");
@@ -1263,6 +1287,7 @@ public class ExceptionFinderTool extends ASTVisitor {
 	}
 
 	public void printReport() {
+		SampleHandler.printMessage(" ,"+getTryCallD());
 		SampleHandler.printMessage(" ,"+getCatchQuantity());
 		SampleHandler.printMessage(" ,"+getTryQuantity());
 		SampleHandler.printMessage(" ,"+ getCatchSLOC());
@@ -1287,9 +1312,6 @@ public class ExceptionFinderTool extends ASTVisitor {
 		//SampleHandler.printMessage(" ,"+getFlowActionPercentages());
 		SampleHandler.printMessageLine("");
 	}
-
-
-	
 	
 	
 }
