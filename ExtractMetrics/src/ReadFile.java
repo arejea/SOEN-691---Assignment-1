@@ -181,25 +181,6 @@ public class ReadFile {
         values[4] = pre_bugs.get(file);
       dataset.put(file, values);
     }
-
-    int post_bug = 0;
-    int pre_bug = 0;
-    int num_change = 0;
-
-    for(Map.Entry<String, int[]> entry : dataset.entrySet()){
-      if(entry.getValue()[3] != 0){
-        post_bug++;
-      }
-      if(entry.getValue()[4] != 0){
-        pre_bug++;
-      }
-      if(entry.getValue()[2] != 0){
-        num_change++;
-      }
-    }
-    System.out.println("Number of post-release bugs = " + post_bug);
-    System.out.println("Number of pre-release bugs = " + pre_bug);
-    System.out.println("Number of files have changed = " + num_change);
     System.out.println("Done");
     return dataset;
   }
