@@ -58,6 +58,7 @@ public class ReadFile {
 
     List<String> bugList = readBugs(bugFile);
     final Map<String, Integer> result = new HashMap<>();
+    int numOfChanges = 0;
     for (String bug : bugList) {
       try (BufferedReader br = new BufferedReader(new FileReader(changeFile))) {
 
@@ -66,6 +67,7 @@ public class ReadFile {
         while ((line = br.readLine()) != null) {
           if (line.contains("commit--") && line.contains(bug)) {
             isTargetChange = true;
+            numOfChanges++;
           } else if (!line.isEmpty() && line.contains(".java") && isTargetChange) {
             //result.put(line, Integer.max(result.get(line)+1, 1));
             updateCounter(result, line);
@@ -77,6 +79,7 @@ public class ReadFile {
         e.printStackTrace();
       }
     }
+    System.out.println("Number of Changes are : " + numOfChanges);
     return result;
   }
 

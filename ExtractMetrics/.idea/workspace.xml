@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd0e90bf-f348-4dbb-baed-7d366a651c08" name="Default Changelist" comment="" />
+    <list default="true" id="91b0bd26-9642-4c04-83b9-64ac9764c471" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExtractMetrics/ReadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExtractMetrics/ReadFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadFile.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,42 +16,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="802222365">
+    <session id="145781492">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="14" />
-          <entry key="txt" value="30" />
+          <entry key="csv" value="3" />
+          <entry key="java" value="12" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="14" />
-          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="CSV" value="1" />
+          <entry key="JAVA" value="12" />
+          <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2717" />
-          <entry key="txt" value="6" />
+          <entry key="csv" value="4" />
+          <entry key="java" value="1353" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2717" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="CSV" value="4" />
+          <entry key="JAVA" value="1353" />
         </counts>
       </usages-collector>
     </session>
@@ -55,83 +59,41 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ReadFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+            <state relative-caret-position="476">
+              <caret line="56" column="82" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#readBugs#0;class#ReadFile#0" />
+                <element signature="method#findBugs#0;class#ReadFile#0" />
                 <element signature="method#findAuthors#0;class#ReadFile#0" />
                 <element signature="method#updateAuthor#0;class#ReadFile#0" />
                 <element signature="method#updateCounter#0;class#ReadFile#0" />
-                <element signature="method#readBugs#0;class#ReadFile#0" />
                 <element signature="method#findCodeChurnAndChange#0;class#ReadFile#0" />
                 <element signature="method#updateCodeChurnAndChange#0;class#ReadFile#0" />
+                <element signature="method#mergeData#0;class#ReadFile#0" />
+                <element signature="method#printResult#0;class#ReadFile#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hadoop_all_files_commits_with_author.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1806">
-              <caret line="397142" column="144" selection-start-line="397142" selection-start-column="19" selection-end-line="397142" selection-end-column="144" />
-            </state>
+        <entry file="file://$PROJECT_DIR$/hadoop_metrics.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hadoop_all_commits_after_release.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11490">
-              <caret line="766" column="94" selection-start-line="766" selection-start-column="21" selection-end-line="766" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/ReadFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-202">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>11799</find>
-      <find>HDFS-15276</find>
-      <find>branch-2.1.1</find>
-      <find>branch-2.1.1-beta/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core</find>
-      <find>name--Wei-Chiu Chuang</find>
-      <find>/hadoop-common/src/main/java/org/apache/hadoop/fs/ByteBufferReadable.java</find>
-      <find>=&gt;</find>
-      <find>.sw</find>
-      <find>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/storage/common/OfflineAggregationInfo.java</find>
-      <find>hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/fs/FileSystemContractBaseTest.java</find>
-      <find>branch</find>
-      <find>hadoop-common-project/hadoop-auth/src/main/java/org/apache/hadoop/security/authentication/client/AuthenticationException.java</find>
-    </findStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/all_post_release_issue.txt" />
-        <option value="$PROJECT_DIR$/hadoop_all_file_changes_before_release.txt" />
-        <option value="$PROJECT_DIR$/src/hadoop_all_pre_release_issue.txt" />
-        <option value="$PROJECT_DIR$/hadoop_all_files_commits_with_author.txt" />
+        <option value="$USER_HOME$/Downloads/ReadFile.java" />
+        <option value="$PROJECT_DIR$/hadoop_metrics.csv" />
         <option value="$PROJECT_DIR$/src/ReadFile.java" />
       </list>
     </option>
@@ -140,11 +102,14 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,17 +126,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588019571839" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588220284627" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -204,11 +167,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fd0e90bf-f348-4dbb-baed-7d366a651c08" name="Default Changelist" comment="" />
-      <created>1587656595496</created>
+      <changelist id="91b0bd26-9642-4c04-83b9-64ac9764c471" name="Default Changelist" comment="" />
+      <created>1588020841832</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1587656595496</updated>
+      <updated>1588020841832</updated>
     </task>
     <servers />
   </component>
@@ -216,7 +179,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26108727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -226,15 +189,15 @@
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32961586" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.30111524" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3283767" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31779662" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32961586" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -249,119 +212,104 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/all_files_commits_with_author_hadoop.txt" />
-    <entry file="file://$PROJECT_DIR$/../../../../../Summer 2019/PCT/Practice/UniqueWordCount/src/UniqueWordCount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../Summer 2019/PCT/Practice/Solution/src/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../Summer 2019/PCT/Practice/Map-Set-Array/src/Sample.java">
+    <entry file="file://$PROJECT_DIR$/hadoop_metrics.txt" />
+    <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="669" selection-start-line="669" selection-end-line="669" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="369" selection-start-line="369" selection-end-line="369" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="2034" selection-start-line="2034" selection-end-line="2034" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../DataExtractionCode/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="89" column="6" lean-forward="true" selection-start-line="89" selection-start-column="6" selection-end-line="98" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hadoop_all_files_commits_with_author_backup.txt" />
-    <entry file="file://$PROJECT_DIR$/hadoop_all_post_release_issue.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="395" column="8" selection-start-line="395" selection-start-column="8" selection-end-line="395" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hadoop_authors_files.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hadoop_all_files_commits_with_author_archive.txt" />
-    <entry file="file://$PROJECT_DIR$/src/hadoop_all_pre_release_issue.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hadoop_all_file_changes_before_release_archive.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hadoop_all_commits_before_release.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="484964" column="122" selection-start-line="484964" selection-start-column="120" selection-end-line="484964" selection-end-column="122" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/Downloads/ReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="403">
+          <caret line="72" column="58" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hadoop_all_file_changes_before_release.txt">
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/fs/store/EtagChecksum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25012">
-          <caret line="132873" column="149" selection-start-line="132873" selection-start-column="143" selection-end-line="132873" selection-end-column="149" />
+        <state relative-caret-position="-385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/fs/shell/package-info.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-common-project/hadoop-annotations/src/main/java/org/apache/hadoop/classification/InterfaceStability.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/compress/zstd/package-info.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-maven-plugins/src/main/java/org/apache/hadoop/maven/plugin/protoc/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hadoop_all_files_commits_with_author.txt">
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapreduce/v2/app/speculate/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1806">
-          <caret line="397142" column="144" selection-start-line="397142" selection-start-column="19" selection-end-line="397142" selection-end-column="144" />
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-common-project/hadoop-kms/src/test/java/org/apache/hadoop/crypto/key/kms/server/TestKMS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12805" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-common-project/hadoop-auth/src/main/java/org/apache/hadoop/util/PlatformName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/PriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hadoop-rel-release-3.1.0/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/namenode/TestFsck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34478" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hadoop_all_commits_after_release.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11490">
-          <caret line="766" column="94" selection-start-line="766" selection-start-column="21" selection-end-line="766" selection-end-column="94" />
-        </state>
+        <state relative-caret-position="-28493" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hadoop_all_file_changes_before_release copy.txt" />
+    <entry file="file://$PROJECT_DIR$/hadoop_all_file_changes_before_release.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2469811" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hadoop_all_commits_before_release.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8494358" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+        <state relative-caret-position="476">
+          <caret line="56" column="82" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#readBugs#0;class#ReadFile#0" />
+            <element signature="method#findBugs#0;class#ReadFile#0" />
             <element signature="method#findAuthors#0;class#ReadFile#0" />
             <element signature="method#updateAuthor#0;class#ReadFile#0" />
             <element signature="method#updateCounter#0;class#ReadFile#0" />
-            <element signature="method#readBugs#0;class#ReadFile#0" />
             <element signature="method#findCodeChurnAndChange#0;class#ReadFile#0" />
             <element signature="method#updateCodeChurnAndChange#0;class#ReadFile#0" />
+            <element signature="method#mergeData#0;class#ReadFile#0" />
+            <element signature="method#printResult#0;class#ReadFile#0" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hadoop_metrics.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
